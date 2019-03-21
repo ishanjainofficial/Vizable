@@ -99,25 +99,64 @@
                                     <action selector="saveString:" destination="l0p-T4-jFR" eventType="touchUpInside" id="Wh1-Vh-qqX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XZw-xe-mIj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XZw-xe-mIj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwO-UL-SAY">
+                                <rect key="frame" x="0.0" y="463" width="375" height="204"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VST-CV-DBW">
+                                        <rect key="frame" x="8" y="8" width="359" height="188"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VST-CV-DBW" secondAttribute="bottom" constant="8" id="5GB-64-AqP"/>
+                                    <constraint firstAttribute="trailing" secondItem="VST-CV-DBW" secondAttribute="trailing" constant="8" id="6zk-BY-xBf"/>
+                                    <constraint firstItem="VST-CV-DBW" firstAttribute="leading" secondItem="CwO-UL-SAY" secondAttribute="leading" constant="8" id="DHN-jw-KnH"/>
+                                    <constraint firstAttribute="bottom" secondItem="VST-CV-DBW" secondAttribute="bottom" constant="8" id="GI9-OH-wpy"/>
+                                    <constraint firstItem="VST-CV-DBW" firstAttribute="top" secondItem="CwO-UL-SAY" secondAttribute="top" constant="8" id="bSd-hd-9Lw"/>
+                                    <constraint firstItem="VST-CV-DBW" firstAttribute="leading" secondItem="CwO-UL-SAY" secondAttribute="leading" constant="8" id="hVl-9a-Alc"/>
+                                    <constraint firstAttribute="trailing" secondItem="VST-CV-DBW" secondAttribute="trailing" constant="8" id="sl2-wJ-mMz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XZw-xe-mIj" firstAttribute="leading" secondItem="Hx7-4a-KtV" secondAttribute="leading" id="21d-S8-2dK"/>
                             <constraint firstItem="O9Q-jX-6H7" firstAttribute="top" secondItem="Hx7-4a-KtV" secondAttribute="top" id="6UN-ct-qZR"/>
+                            <constraint firstItem="CwO-UL-SAY" firstAttribute="top" secondItem="XZw-xe-mIj" secondAttribute="bottom" constant="-204" id="6r2-O9-OnI"/>
                             <constraint firstItem="O9Q-jX-6H7" firstAttribute="trailing" secondItem="q7P-IE-3e3" secondAttribute="trailing" id="C93-oC-RHc"/>
                             <constraint firstAttribute="trailing" secondItem="XZw-xe-mIj" secondAttribute="trailing" id="WcH-T0-MJY"/>
+                            <constraint firstItem="XZw-xe-mIj" firstAttribute="bottom" secondItem="q7P-IE-3e3" secondAttribute="bottom" id="XnG-Q4-TqM"/>
                             <constraint firstItem="XZw-xe-mIj" firstAttribute="top" secondItem="Hx7-4a-KtV" secondAttribute="top" id="dg3-Bl-2kk"/>
+                            <constraint firstItem="XZw-xe-mIj" firstAttribute="trailing" secondItem="q7P-IE-3e3" secondAttribute="trailing" id="hQs-1h-pog"/>
                             <constraint firstItem="XZw-xe-mIj" firstAttribute="bottom" secondItem="q7P-IE-3e3" secondAttribute="bottom" id="hXl-tZ-3jf"/>
+                            <constraint firstItem="CwO-UL-SAY" firstAttribute="bottom" secondItem="q7P-IE-3e3" secondAttribute="bottom" id="i2H-Ia-d3P"/>
+                            <constraint firstItem="XZw-xe-mIj" firstAttribute="leading" secondItem="q7P-IE-3e3" secondAttribute="leading" id="k6q-II-ihO"/>
+                            <constraint firstItem="XZw-xe-mIj" firstAttribute="top" secondItem="Hx7-4a-KtV" secondAttribute="top" id="m5r-ub-rIw"/>
+                            <constraint firstItem="CwO-UL-SAY" firstAttribute="trailing" secondItem="q7P-IE-3e3" secondAttribute="trailing" id="piE-1S-Zsi"/>
                             <constraint firstItem="O9Q-jX-6H7" firstAttribute="leading" secondItem="q7P-IE-3e3" secondAttribute="leading" id="pyz-Op-40R"/>
+                            <constraint firstItem="CwO-UL-SAY" firstAttribute="leading" secondItem="q7P-IE-3e3" secondAttribute="leading" id="qQG-Rj-7bW"/>
                             <constraint firstItem="O9Q-jX-6H7" firstAttribute="bottom" secondItem="q7P-IE-3e3" secondAttribute="bottom" id="xK2-2v-dUH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q7P-IE-3e3"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="XZw-xe-mIj" id="tHt-gt-Dzc"/>
+                        <outlet property="informationLabel" destination="VST-CV-DBW" id="4Fz-fe-fON"/>
+                        <outlet property="informationView" destination="CwO-UL-SAY" id="3Ma-Cd-v4Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TA3-kM-CTL" userLabel="First Responder" sceneMemberID="firstResponder"/>

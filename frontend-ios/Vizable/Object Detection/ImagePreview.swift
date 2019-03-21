@@ -14,6 +14,8 @@ class ImagePreview: UIViewController {
     
     public var capturedImage: UIImage?
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var informationView: UIView!
     
     var detectedObject: String = ""
     var databaseHandle:DatabaseHandle = 0
@@ -25,6 +27,8 @@ class ImagePreview: UIViewController {
         if let image = capturedImage{
             processPic(image: image)
         }
+         
+        informationView.layer.cornerRadius = 10.0
         
         ref = Database.database().reference()
     }
@@ -34,6 +38,7 @@ class ImagePreview: UIViewController {
             let request = VNCoreMLRequest(model: model) { (request, error) in
                 if let results = request.results as? [VNClassificationObservation]{
                     self.detectedObject = results[0].identifier
+                    self.informationLabel.text = "This object is a \(self.detectedObject)"
                     self.detect.stringToSpeech(speech: "This object is a \(self.detectedObject)")
                     
                 }
@@ -63,4 +68,53 @@ class ImagePreview: UIViewController {
         
     }
     
+}
+
+extension UIView {
+    @IBInspectable
+    var shadowRadius: CGFloat {
+        get {
+            return layer.shadowRadius
+        }
+        set {
+            layer.shadowRadius = newValue
+        }
+    }
+    
+    @IBInspectable
+    var shadowOpacity: Float {
+        get {
+            return layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+    
+    @IBInspectable
+    var shadowOffset: CGSize {
+        get {
+            return layer.shadowOffset
+        }
+        set {
+            layer.shadowOffset = newValue
+        }
+    }
+    
+    @IBInspectable
+    var shadowColor: UIColor? {
+        get {
+            if let color = layer.shadowColor {
+                return UIColor(cgColor: color)
+            }
+            return nil
+        }
+        set {
+            if let color = newValue {
+                layer.shadowColor = color.cgColor
+            } else {
+                layer.shadowColor = nil
+            }
+        }
+    }
 }
